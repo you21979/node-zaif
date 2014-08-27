@@ -1,0 +1,28 @@
+{
+  "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
+  "name": "etwings",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "request-promise" : "0.1.2"
+  },
+  "readmeFilename": "README.md",
+  "description": "etwings trade api for promise",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/you21979/node-etwings.git"
+  },
+  "keywords": [
+    "trade api",
+    "etwings"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/you21979/node-etwings/issues"
+  }
+}
