@@ -9,7 +9,11 @@
   "readmeFilename": "README.md",
   "description": "etwings trade api for promise",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "bluebird" : "",
+    "mocha" : "",
+    "power-assert" : ""
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
