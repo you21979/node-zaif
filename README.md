@@ -132,7 +132,7 @@ api.getInfo().then(console.log);
 
 trade(pair, 'bid' or 'ask', price, amount)
 ```
-api.trade('mona_jpy', 'bid', 5, 10000);
+api.trade('mona_jpy', 'bid', 5, 10000).then(console.log);
 { received: 0,
   remains: 10000,
   order_id: 5999,
