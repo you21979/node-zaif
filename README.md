@@ -105,7 +105,6 @@ edit config.json
  "apikey" : "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
  "secretkey" : "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
 }
-
 ```
 
 module prepare
