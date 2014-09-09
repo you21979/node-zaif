@@ -153,6 +153,7 @@ api.activeOrders({}).then(console.log);
 
 cancelorder(order_id)
 ```
+api.cancelOrder(5999).then(console.log);
 { order_id: 5999,
   funds: { jpy: 100000, btc: 0, mona: 0 } }
 ```
