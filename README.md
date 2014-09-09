@@ -162,3 +162,8 @@ License
 
 MIT License
 
+Donate
+------
+bitcoin:1GLnWVBpadWnHpxf8KpXTQdwMdHAWtzNEw  
+monacoin:MCEp2NWSFc352uaDc6nQYv45qUChnKRsKK  
+
