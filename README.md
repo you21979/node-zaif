@@ -24,13 +24,13 @@ var etwings = require('etwings');
 var api = etwings.PublicApi;
 ```
 
-lastprice
+lastprice(pair)
 ```
 api.lastPrice('mona_jpy').then(console.log)
 { last_price: 16.4 }
 ```
 
-depth
+depth(pair)
 ```
 api.depth('mona_jpy').then(console.log)
 { asks:
@@ -61,7 +61,7 @@ api.depth('mona_jpy').then(console.log)
      [ 0.1, 51162 ] ] }
 ```
 
-trades
+trades(pair)
 ```
 api.trades('mona_jpy').then(console.log)
 [ { date: 1410277807,
@@ -84,7 +84,7 @@ api.trades('mona_jpy').then(console.log)
     trade_type: 'bid' } ]
 ```
 
-ticker
+ticker(pair)
 ```
 api.ticker('mona_jpy').then(console.log)
 { last: 16.1,
@@ -161,5 +161,5 @@ api.cancelOrder(5999).then(console.log);
 License
 -------
 
-MITb License
+MIT License
 
