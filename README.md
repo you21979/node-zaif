@@ -15,7 +15,7 @@ api document
 ------------
 https://exchange.etwings.com/doc_api
 
-public api
+Public API
 ----------
 
 module prepare
@@ -96,8 +96,69 @@ api.ticker('mona_jpy').then(console.log)
   ask: 16.2 }
 ```
 
+Private API
+-----------
+
+edit config.json
+```
+{
+ "apikey" : "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+ "secretkey" : "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+}
+
+```
+
+module prepare
+```
+var etwings = require('etwings');
+var Promise = require('bluebird');
+var fs = Promise.promisifyAll(require('fs'));
+
+fs.readFileAsync('./config.json').then(JSON.parse).
+then(function(config){
+    var api = etwings.createPrivateApi(config.apikey, config.secretkey, 'user agent is node-etwings');
+    // call api
+}).catch(console.log);
+```
+
+getinfo()
+```
+api.getInfo().then(console.log);
+{ funds: { jpy: 100000, btc: 0, mona: 0 },
+  rights: { info: 1, trade: 1, withdraw: 1 },
+  trade_count: 9999,
+  open_orders: 0,
+  server_time: 1410278546 }
+```
+
+trade(pair, 'bid' or 'ask', price, amount)
+```
+api.trade('mona_jpy', 'bid', 5, 10000);
+{ received: 0,
+  remains: 10000,
+  order_id: 5999,
+  funds: { jpy: 50000, btc: 0, mona: 0 } }
+```
+
+activeorders()
+```
+api.activeOrders({}).then(console.log);
+{ '5999':
+   { currency_pair: 'mona_jpy',
+     action: 'bid',
+     amount: 10000,
+     price: 5,
+     timestamp: '1410279064' } }
+```
+
+cancelorder(order_id)
+```
+{ order_id: 5999,
+  funds: { jpy: 100000, btc: 0, mona: 0 } }
+```
+
 License
 -------
 
-MIT License
+MITb License
 
