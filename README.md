@@ -1,7 +1,8 @@
 node-etwings
 ============
 
-etwings trade api for promise
+etwings is bitcoin and monacoin exchange market.  
+You can be automated trading using this module.  
 
 install
 -------
@@ -9,6 +10,11 @@ install
 ```
 npm install etwings
 ```
+
+api document
+------------
+https://exchange.etwings.com/doc_api
+
 
 License
 -------
