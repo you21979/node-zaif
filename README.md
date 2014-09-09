@@ -141,7 +141,7 @@ api.trade('mona_jpy', 'bid', 5, 10000).then(console.log);
 
 activeorders()
 ```
-api.activeOrders({}).then(console.log);
+api.activeOrders().then(console.log);
 { '5999':
    { currency_pair: 'mona_jpy',
      action: 'bid',
