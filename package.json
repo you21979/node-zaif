@@ -1,7 +1,7 @@
 {
   "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
   "name": "etwings",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "dependencies": {
     "limit-request-promise" : "0.0.3"
@@ -23,6 +23,8 @@
   },
   "keywords": [
     "trade api",
+    "bitcoin",
+    "monacoin",
     "etwings"
   ],
   "license": "MIT",
