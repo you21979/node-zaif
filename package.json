@@ -4,7 +4,7 @@
   "version": "0.0.7",
   "private": false,
   "dependencies": {
-    "limit-request-promise" : "0.0.3"
+    "limit-request-promise" : ""
   },
   "readmeFilename": "README.md",
   "description": "etwings trade api for promise",
