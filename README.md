@@ -1,27 +1,27 @@
-node-etwings
+node-zaif
 ============
 
-etwings is bitcoin and monacoin exchange market.  
+zaif is bitcoin and monacoin exchange market.  
 You can be automated trading using this module.  
 
 install
 -------
 
 ```
-npm install etwings
+npm install zaif.jp
 ```
 
 api document
 ------------
-https://exchange.etwings.com/doc_api
+https://zaif.jp/doc_api
 
 Public API
 ----------
 
 module prepare
 ```
-var etwings = require('etwings');
-var api = etwings.PublicApi;
+var zaif = require('zaif.jp');
+var api = zaif.PublicApi;
 ```
 
 lastprice(pair)
@@ -109,13 +109,13 @@ edit config.json
 
 module prepare
 ```
-var etwings = require('etwings');
+var zaif = require('zaif.jp');
 var Promise = require('bluebird');
 var fs = Promise.promisifyAll(require('fs'));
 
 fs.readFileAsync('./config.json').then(JSON.parse).
 then(function(config){
-    var api = etwings.createPrivateApi(config.apikey, config.secretkey, 'user agent is node-etwings');
+    var api = zaif.createPrivateApi(config.apikey, config.secretkey, 'user agent is node-zaif');
     // call api
 }).catch(console.log);
 ```
