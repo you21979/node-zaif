@@ -1,11 +1,11 @@
-var etwings = require('..');
-var constant = etwings.Constant;
-var apiv1 = etwings.PublicApi;
+var zaif = require('..');
+var constant = zaif.Constant;
+var apiv1 = zaif.PublicApi;
 var assert = require('assert');
 
 var http = require('http');
 
-constant.ETWINGS_APIV1_URL = 'http://localhost:3000/api/1'
+constant.OPT_APIV1_URL = 'http://localhost:3000/api/1'
 var selfhost = function(proc){
     var sv = http.createServer(function(req, res){
         proc(req, res);

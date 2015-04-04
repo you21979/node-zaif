@@ -1,5 +1,5 @@
-var etwings = require('..');
-var apiv1 = etwings.PublicApi;
+var zaif = require('..');
+var apiv1 = zaif.PublicApi;
 var Vision = module.exports = function(){
 }
 
