@@ -157,6 +157,88 @@ api.cancelOrder(5999).then(console.log);
   funds: { jpy: 100000, btc: 0, mona: 0 } }
 ```
 
+Stream API
+-----------
+
+```
+var zaif = require('zaif.jp');
+var w = zaif.createStreamApi('mona_jpy', function(data){
+    console.log(data)
+});
+{ asks: 
+   [ [ 17.1, 1576 ],
+     [ 17.2, 3446 ],
+     [ 17.3, 4226 ],
+     [ 17.4, 7366 ],
+     [ 17.5, 14613 ],
+     [ 17.6, 2420 ],
+     [ 17.7, 3300 ],
+     [ 17.8, 2184 ],
+     [ 17.9, 4520 ],
+     [ 18, 3095 ],
+     [ 18.1, 1395 ],
+     [ 18.2, 1407 ],
+     [ 18.3, 2205 ],
+     [ 18.5, 3856 ],
+     [ 18.6, 2440 ],
+     [ 18.8, 3348 ],
+     [ 18.9, 1928 ],
+     [ 19, 4068 ],
+     [ 19.2, 1882 ],
+     [ 19.3, 22232 ] ],
+  last_price: { action: 'ask', price: 17 },
+  trades: 
+   [ { currenty_pair: 'mona_jpy',
+       trade_type: 'ask',
+       price: 17,
+       tid: 80618,
+       amount: 64,
+       date: 1428130395 },
+     { currenty_pair: 'mona_jpy',
+       trade_type: 'ask',
+       price: 17,
+       tid: 80617,
+       amount: 64,
+       date: 1428130337 },
+     { currenty_pair: 'mona_jpy',
+       trade_type: 'ask',
+       price: 17,
+       tid: 80616,
+       amount: 64,
+       date: 1428130278 },
+     { currenty_pair: 'mona_jpy',
+       trade_type: 'ask',
+       price: 16.9,
+       tid: 80505,
+       amount: 16,
+       date: 1428117904 } ],
+  bids: 
+   [ [ 17, 1133 ],
+     [ 16.9, 2390 ],
+     [ 16.8, 1944 ],
+     [ 16.7, 2370 ],
+     [ 16.6, 3585 ],
+     [ 16.5, 16985 ],
+     [ 16.4, 1390 ],
+     [ 16.3, 1981 ],
+     [ 16.2, 2399 ],
+     [ 16.1, 4210 ],
+     [ 16, 9991 ],
+     [ 15.9, 2955 ],
+     [ 15.8, 1978 ],
+     [ 15.7, 1859 ],
+     [ 15.6, 1991 ],
+     [ 15.5, 2396 ],
+     [ 15.4, 50 ],
+     [ 15.3, 2219 ],
+     [ 15.2, 3172 ],
+     [ 15.1, 3862 ] ],
+  currency_pair: 'mona_jpy',
+  timestamp: '2015-04-04 16:04:14.000419' }
+
+```
+
+
 License
 -------
 
