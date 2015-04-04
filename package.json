@@ -1,15 +1,17 @@
 {
   "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
   "name": "zaif.jp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "dependencies": {
+    "ws" : "0.7.x",
     "limit-request-promise" : ""
   },
   "readmeFilename": "README.md",
   "description": "zaif.jp trade api for promise",
   "main": "index.js",
   "devDependencies": {
+    "moment" : "",
     "bluebird" : "",
     "mocha" : "",
     "power-assert" : ""

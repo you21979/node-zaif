@@ -13,7 +13,7 @@ npm install zaif.jp
 
 api document
 ------------
-https://zaif.jp/doc_api
+https://corp.zaif.jp/api-docs/
 
 Public API
 ----------
