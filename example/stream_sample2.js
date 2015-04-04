@@ -35,17 +35,10 @@ var output = function(v){
 }
 
 init(pair).then(function(v){
-    var w = zaif.createStreamApi(pair, function(data){
+    output(v)
+    return zaif.createStreamApi(pair, function(data){
         output(data)
     })
-    w.connect();
-    return {
-        data : v,
-        conn : w,
-    };
-}).then(function(v){
-    output(v.data)
-    return v.conn;
 }).delay(100000).then(function(conn){
     // 100秒たったら終了
     conn.close()
