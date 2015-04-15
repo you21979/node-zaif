@@ -11,7 +11,7 @@ var init = function(pair){
         return {
             timestamp:'',
             currency_pair: pair,
-            lastprice: {action:'', price:0},
+            last_price: {action:'', price:0},
             asks: v.asks.slice(0, MAX),
             bids: v.bids.slice(0, MAX),
             trades : [],
@@ -21,8 +21,8 @@ var init = function(pair){
             v.trades = trades.slice(0, MAX);
             if(v.trades.length > 0){
                 v.timestamp = moment().format("YYYY-MM-DD HH:mm:ss.000000");
-                v.lastprice.action = v.trades[0].trade_type;
-                v.lastprice.price = v.trades[0].price;
+                v.last_price.action = v.trades[0].trade_type;
+                v.last_price.price = v.trades[0].price;
             }
             return v;
         })
