@@ -1,6 +1,13 @@
-var Vision = require('./vision');
-var x = new Vision(); 
-x.lookup({base:'BTC',counter:'JPY'}).then(console.log);
-x.history({base:'BTC',counter:'JPY'}).then(console.log);
-x.lookup({base:'MONA',counter:'JPY'}).then(console.log);
-x.history({base:'MONA',counter:'JPY'}).then(console.log);
+var Promise = require('bluebird');
+var zaif = require('..');
+var api = zaif.PublicApi;
+
+Promise.all(
+[
+    api.lastPrice('btc_jpy').then(function(v){return ['btc_jpy', v.last_price]}),
+    api.lastPrice('mona_jpy').then(function(v){return ['mona_jpy', v.last_price]}),
+    api.lastPrice('mona_btc').then(function(v){return ['mona_btc', v.last_price]})
+]
+).then(function(res){
+    console.log(res.map(function(v){ return v.join('=') }).join('\n'))
+})
