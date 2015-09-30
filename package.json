@@ -1,10 +1,10 @@
 {
   "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
   "name": "zaif.jp",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "dependencies": {
-    "ws" : "0.7.x",
+    "ws" : "0.8.x",
     "limit-request-promise" : ""
   },
   "readmeFilename": "README.md",
