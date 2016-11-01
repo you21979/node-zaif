@@ -250,6 +250,6 @@ MIT License
 
 Donate
 ------
-bitcoin:1GLnWVBpadWnHpxf8KpXTQdwMdHAWtzNEw  
+bitcoin:1DWLJFxmPQVSYER6pjwdaVHfJ98nM76LiN
 monacoin:MCEp2NWSFc352uaDc6nQYv45qUChnKRsKK  
 
