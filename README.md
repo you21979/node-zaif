@@ -3,7 +3,7 @@ node-zaif
 
 [![NPM](https://nodei.co/npm/zaif.jp.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/zaif.jp)  
 [![Build Status](https://secure.travis-ci.org/you21979/node-zaif.png?branch=master)](https://travis-ci.org/you21979/node-zaif)
-[![Coverage Status](https://coveralls.io/repos/you21979/node-zaif/badge.png)](https://coveralls.io/r/you21979/node-zaif)
+[![Coverage Status](https://coveralls.io/repos/github/you21979/node-zaif/badge.svg?branch=master)](https://coveralls.io/github/you21979/node-zaif?branch=master)
 
 zaif is bitcoin and monacoin exchange market.  
 You can be automated trading using this module.  
