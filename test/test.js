@@ -24,11 +24,12 @@ describe('test', function () {
                     assert(res.deposit.jpy === 20440)
                 })
             }, function(res, headers, method, url, body){
-                var param = qstring.parse(body)
+                assert(method === 'POST');
                 assert(url === '/tapi');
                 assert(headers['key'] === config.apikey)
                 assert(headers['user-agent'] === config.useragent)
                 assert(headers['sign'])
+                var param = qstring.parse(body)
                 assert(param.method === 'get_info');
                 assert(param.nonce);
                 var result = JSON.stringify({
@@ -77,6 +78,7 @@ describe('test', function () {
                     assert(v.bids[1][1] == 2.2);
                 })
             }, function(res, headers, method, url, body){
+                assert(method === 'GET');
                 assert(url === '/api/1/depth/btc_jpy');
                 var result = JSON.stringify({
                     asks:[[1000, 1.0],[1001,0.9]], bids:[[999,1.5],[998,2.2]]
@@ -91,6 +93,7 @@ describe('test', function () {
                     assert(v.last_price === 75555.0);
                 })
             }, function(res, headers, method, url, body){
+                assert(method === 'GET');
                 assert(url === '/api/1/last_price/btc_jpy');
                 var result = JSON.stringify({"last_price": 75555.0});
                 res.end(result);
@@ -109,6 +112,7 @@ describe('test', function () {
                     assert(v.ask === 75635.0);
                 })
             }, function(res, headers, method, url, body){
+                assert(method === 'GET');
                 assert(url === '/api/1/ticker/btc_jpy');
                 var result = JSON.stringify({
                     "last": 75630.0, "high": 75900.0, "low": 73930.0, "vwap": 75048.3677, "volume": 11725.0985, "bid": 75630.0, "ask": 75635.0
@@ -125,6 +129,7 @@ describe('test', function () {
                     assert(v[0].currency_pair === 'btc_jpy')
                 })
             }, function(res, headers, method, url, body){
+                assert(method === 'GET');
                 assert(url === '/api/1/trades/btc_jpy');
                 var result = JSON.stringify([
                     { date: 1477977267,
