@@ -3,9 +3,58 @@ var assert = require('assert');
 var les = require("local-echoserver");
 var verify = require("@you21979/simple-verify");
 var qstring = require("querystring");
+var Promise = require("bluebird");
 var zaif = require('..');
 
 describe('test', function () {
+    describe('stream api test', function (done) {
+        var constant = zaif.Constant;
+        it('stream', function () {
+            return les(function(url){
+                return new Promise(function(resolve,reject){
+                    constant.OPT_WEBSOCKET_URL = url.replace("http://","ws://");
+                    var w = zaif.createStreamApi('btc_jpy', function(data){
+                        w.close()
+                        resolve(data)
+                    })
+                }).then(function(res){
+                    assert(res.currency_pair === 'mona_jpy')
+                })
+            },
+            function(res, headers, method, url, body){},
+            3000,
+            function(ws){
+                ws.on("connection", function(conn) {
+                    conn.send(JSON.stringify({ asks: 
+                       [ [ 17.1, 1576 ],
+                         [ 17.2, 3446 ],
+                         [ 17.3, 4226 ],
+                         [ 19.3, 22232 ] ],
+                      last_price: { action: 'ask', price: 17 },
+                      trades: 
+                       [ { currenty_pair: 'mona_jpy',
+                           trade_type: 'ask',
+                           price: 17,
+                           tid: 80618,
+                           amount: 64,
+                           date: 1428130395 },
+                         { currenty_pair: 'mona_jpy',
+                           trade_type: 'ask',
+                           price: 16.9,
+                           tid: 80505,
+                           amount: 16,
+                           date: 1428117904 } ],
+                      bids: 
+                       [ [ 17, 1133 ],
+                         [ 16.9, 2390 ],
+                         [ 15.1, 3862 ] ],
+                      currency_pair: 'mona_jpy',
+                      timestamp: '2015-04-04 16:04:14.000419' })
+                    );
+                })
+            })
+        })
+    })
     describe('private api test', function () {
         var constant = zaif.Constant;
         var config = {apikey : "",secretkey : "", useragent : "tradebot"}

@@ -1,7 +1,7 @@
 {
   "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
   "name": "zaif.jp",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": false,
   "dependencies": {
     "@you21979/simple-verify" : "0.0.x",
