@@ -17,11 +17,14 @@
     "local-echoserver" : "",
     "moment" : "",
     "bluebird" : "",
-    "mocha" : "",
-    "power-assert" : ""
+    "istanbul":"",
+    "coveralls":"",
+    "power-assert":"",
+    "mocha":""
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
