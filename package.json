@@ -1,11 +1,12 @@
 {
   "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
   "name": "zaif.jp",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": false,
   "dependencies": {
     "@you21979/simple-verify" : "0.0.x",
     "@you21979/object-util" : "0.0.x",
+    "@you21979/http-api-error" : "0.0.x",
     "limit-request-promise" : "0.1.x",
     "ws" : "1.1.x",
     "request": "^2.34"

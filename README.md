@@ -242,6 +242,39 @@ var w = zaif.createStreamApi('mona_jpy', function(data){
 
 ```
 
+Error Handling
+--------------
+
+* simple error control
+
+```
+api.getInfo().catch(function(e){
+    console.log(e.message)
+})
+```
+
+* technical error control
+
+```
+var errors = require('zaif.jp/errors')
+api.getInfo()
+    .catch(errors.HttpApiError, function (reason) {
+        // API ERROR
+        console.log(reason.message, "API", reason.error_code)
+    })
+    .catch(errors.StatusCodeError, function (reason) {
+        // HTTP STATUS ERROR
+        console.log("HTTP StatusCodeError " + reason.statusCode, "HTTP", reason.statusCode)
+    })
+    .catch(errors.RequestError, function (reason) {
+        // REQUEST ERROR(SYSTEMCALL, TIMEOUT)
+        console.log(reason.message, "SYSCALL", reason.error.code)
+    })
+    .catch(function(e){
+        // OTHER ERROR
+        console.log(e.message)
+    })
+```
 
 License
 -------
