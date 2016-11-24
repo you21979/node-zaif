@@ -263,7 +263,7 @@ api.getInfo()
         console.log(reason.message, "API", reason.error_code)
     })
     .catch(errors.StatusCodeError, function (reason) {
-        // HTTP STATUS ERROR
+        // HTTP STATUS ERROR(404 or 500, 502, etc...)
         console.log("HTTP StatusCodeError " + reason.statusCode, "HTTP", reason.statusCode)
     })
     .catch(errors.RequestError, function (reason) {
