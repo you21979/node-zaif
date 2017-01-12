@@ -12,7 +12,7 @@
     "request": "^2.34"
   },
   "readmeFilename": "README.md",
-  "description": "zaif.jp trade api for promise",
+  "description": "Promise-base Cryptocurrency Exchange zaif.jp API for node.js",
   "main": "index.js",
   "devDependencies": {
     "local-echoserver" : "",
