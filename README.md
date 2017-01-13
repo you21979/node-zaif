@@ -5,14 +5,13 @@ node-zaif
 [![Build Status](https://secure.travis-ci.org/you21979/node-zaif.png?branch=master)](https://travis-ci.org/you21979/node-zaif)
 [![Coverage Status](https://coveralls.io/repos/github/you21979/node-zaif/badge.svg?branch=master)](https://coveralls.io/github/you21979/node-zaif?branch=master)
 
-zaif is bitcoin and monacoin exchange market.  
-You can be automated trading using this module.  
+Promise-base Cryptocurrency Exchange zaif.jp API for node.js
 
 install
 -------
 
 ```
-npm install zaif.jp
+npm i zaif.jp
 ```
 
 api document
@@ -283,6 +282,6 @@ MIT License
 
 Donate
 ------
-bitcoin:1DWLJFxmPQVSYER6pjwdaVHfJ98nM76LiN
+bitcoin:1DWLJFxmPQVSYER6pjwdaVHfJ98nM76LiN  
 monacoin:MCEp2NWSFc352uaDc6nQYv45qUChnKRsKK  
 
