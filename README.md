@@ -275,6 +275,28 @@ api.getInfo()
     })
 ```
 
+Tuning Network Parameter
+------------------------
+
+* Attention! Global Parameter
+* Setting - KeepAlive Connection
+* Setting - Timeout Second 
+
+```
+var zaif = require('zaif.jp');
+
+var appInitialize = function(){
+    zaif.Constant.OPT_KEEPALIVE = true;
+    zaif.Constant.OPT_TIMEOUT_SEC = 3;
+}
+
+var main = function(){
+    appInitialize();
+}
+
+main()
+```
+
 License
 -------
 
