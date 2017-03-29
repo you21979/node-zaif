@@ -22,7 +22,7 @@ const main_loop = async () => {
 
 const main = async () => {
     initialize()
-    return main_loop()
+    return await main_loop()
 }
 
 main()
