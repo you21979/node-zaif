@@ -15,6 +15,7 @@
   "description": "Promise-base Cryptocurrency Exchange zaif.jp API for node.js",
   "main": "index.js",
   "devDependencies": {
+    "@you21979/promise-sleep" : "",
     "local-echoserver" : "",
     "moment" : "",
     "bluebird" : "",
