@@ -302,6 +302,11 @@ License
 
 MIT License
 
+Affiliate
+---------
+
+https://zaif.jp?ac=s72z4f8o9z
+
 Donate
 ------
 bitcoin:1DWLJFxmPQVSYER6pjwdaVHfJ98nM76LiN  
