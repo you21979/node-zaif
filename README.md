@@ -16,7 +16,7 @@ npm i zaif.jp
 
 api document
 ------------
-https://corp.zaif.jp/api-docs/
+https://techbureau-api-document.readthedocs.io/ja/latest/index.html
 
 Public API
 ----------
