@@ -1,28 +1,28 @@
 {
   "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
   "name": "zaif.jp",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "private": false,
   "dependencies": {
-    "@you21979/simple-verify" : "0.0.x",
-    "@you21979/object-util" : "0.0.x",
-    "@you21979/http-api-error" : "0.0.x",
-    "limit-request-promise" : "0.1.x",
-    "ws" : "1.1.x",
+    "@you21979/simple-verify": "0.0.x",
+    "@you21979/object-util": "0.0.x",
+    "@you21979/http-api-error": "0.0.x",
+    "limit-request-promise": "0.1.x",
+    "ws": "1.1.x",
     "request": "^2.34"
   },
   "readmeFilename": "README.md",
   "description": "Promise-base Cryptocurrency Exchange zaif.jp API for node.js",
   "main": "index.js",
   "devDependencies": {
-    "@you21979/promise-sleep" : "",
-    "local-echoserver" : "",
-    "moment" : "",
-    "bluebird" : "",
-    "istanbul":"",
-    "coveralls":"",
-    "power-assert":"",
-    "mocha":""
+    "@you21979/promise-sleep": "",
+    "local-echoserver": "",
+    "moment": "",
+    "bluebird": "",
+    "istanbul": "",
+    "coveralls": "",
+    "power-assert": "",
+    "mocha": ""
   },
   "scripts": {
     "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha",
